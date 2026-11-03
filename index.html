@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+font-size: 0.76rem;
+      color: var(--slate-grey);
+      font-style: italic;
+    }<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -165,6 +168,23 @@
       justify-content: center;
     }
 
+    /* Cápsula / Tarjeta Blanca de Realce para Logotipos */
+    .logo-badge-card {
+      background-color: #ffffff;
+      padding: 6px 14px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 24, 46, 0.22);
+      border: 1px solid rgba(189, 211, 230, 0.35);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .logo-badge-card:hover {
+      box-shadow: 0 4px 12px rgba(0, 24, 46, 0.3);
+    }
+
     .logo-img {
       display: block;
       height: 38px;
@@ -173,7 +193,8 @@
     }
 
     .nav-logo-only {
-      height: 40px;
+      height: 38px;
+      max-width: 190px;
     }
 
     .logo-fallback {
@@ -193,6 +214,7 @@
 
     .footer-logo .logo-img {
       height: 44px;
+      max-width: 220px;
     }
 
     .footer-logo .logo-fallback {
@@ -553,10 +575,6 @@
     .note-inline {
       display: block;
       margin-top: 4px;
-      font-size: 0.76rem;
-      color: var(--slate-grey);
-      font-style: italic;
-    }
 
     /* Callout final de sección */
     .final-statement-box {
@@ -839,9 +857,11 @@
   <!-- NAVEGACIÓN SUPERIOR FIJA -->
   <nav class="sticky-nav">
     <a href="#" class="nav-brand">
-      <div class="logo-container" title="Ramírez Palos & Aréchiga Temores Abogados Corporativos & Propiedad Intelectual">
-        <img src="rpat-logo.png" alt="Ramírez Palos & Aréchiga Temores" class="logo-img nav-logo-only" onerror="if(!this.dataset.retried){this.dataset.retried='1';this.src='rpat-logo';}else{this.style.display='none';this.nextElementSibling.style.display='inline-flex';}">
-        <div class="logo-fallback">RPAT</div>
+      <div class="logo-badge-card">
+        <div class="logo-container" title="Ramírez Palos & Aréchiga Temores Abogados Corporativos & Propiedad Intelectual">
+          <img src="rpat-logo.png" alt="Ramírez Palos & Aréchiga Temores" class="logo-img nav-logo-only" onerror="if(!this.dataset.retried){this.dataset.retried='1';this.src='rpat-logo';}else{this.style.display='none';this.nextElementSibling.style.display='inline-flex';}">
+          <div class="logo-fallback">RPAT</div>
+        </div>
       </div>
     </a>
     <ul class="nav-links">
@@ -1463,9 +1483,11 @@
   <footer class="doxus-footer">
     <div class="footer-container">
       <div class="footer-top">
-        <div class="logo-container footer-logo" title="Ramírez Palos & Aréchiga Temores Abogados Corporativos & Propiedad Intelectual">
-          <img src="RPA_logo.png" alt="Ramírez Palos & Aréchiga Temores" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';">
-          <div class="logo-fallback">RPAT</div>
+        <div class="logo-badge-card footer-logo">
+          <div class="logo-container" title="Ramírez Palos & Aréchiga Temores Abogados Corporativos & Propiedad Intelectual">
+            <img src="RPA_logo.png" alt="Ramírez Palos & Aréchiga Temores" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';">
+            <div class="logo-fallback">RPAT</div>
+          </div>
         </div>
         <div class="footer-signature">
           <div class="signature-label">Firma Emisora</div>
